@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Document</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #eee;
+  font-family: 'Roboto Slab', serif;
+}
+html{
+  font-size: 62.5%;
+}
+header{
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  z-index: 30;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.items{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style-type: none;
+  gap: 30px;
+}
+.profile-img {
+  border-radius: 50%;
+  border: 2px solid rgb(225, 229, 231);
+  display: block;
+  margin: auto;
+  width: 40px;
+  height: 40px; 
+}
+nav{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  position: fixed;
+  width: 270px;
+  height: 100%;
+  min-height: 650px;
+  color: black;
+  background-color: white;
+  transition: ease-in 0.7s;
+  z-index: 100;
+  top:60px;
+}
+nav.hide{
+  transition: ease-in 0.5s;
+  width: 0;
+}
+.nav-item{
+  font-size: 1.5rem;
+}
+.nav-item:hover{
+  font-weight: 700;
+}
+nav span{
+  width: 100%;
+  text-align: center;
+  margin-top: 1.5rem;
+  overflow: hidden;
+}
+.profile{
+  border-radius: 50%;
+  width:70px;
+  border: #fff 2px solid;
+}
+.name{
+  margin-top:4px;
+  font-size: 13px;
+  font-weight: 100;
+  color: rgb(59, 60, 60);
+}
+.sidebarmenu{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 12px;
+  height: 70%;
+  width: 100%;
+  list-style-type: none;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+.sidebarmenu li{
+  text-align: center;
+  width: 100%; 
+}
+.sidebarmenu li a{
+  display: inline-flex;
+  align-items: left;
+  width: 95%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 8rem;
+  color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: ease-in 0.2s;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: rgb(223, 225, 227);
+  
+}
+.sidebarmenu li a:hover{
+  color: rgb(62, 61, 61);
+  border: 1px solid rgb(170, 173, 175);;
+  background-color: rgb(170, 173, 175);
+}
+.sidebarmenu li a i{
+  margin:0 3px;
+  width: 20px;
+  font-size: 20px;
+}
+#toggle-btn{
+  position: absolute;
+  top: -50px;
+  left: 9px;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  color: black;
+  transition: linear 0.2s;
+  background-color: rgb(223, 225, 227);
+}
+#toggle-btn:hover{
+  background-color: rgb(170, 173, 175);
+}
+
+section{
+  position: relative;
+  top:30px;
+  left: 270px;
+  height: 100%;
+  width: calc(100% - 270px);
+  padding: 30px;
+  transition: ease-in 0.7s;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.expand{
+  width: 100%;
+  left:0;
+  transition: ease-out 0.5s;
+}
+/* for cards */
+.grid{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width:80em;
+    height: 100%;
+    gap:2rem;
+  }
+  .card{
+    width:200px;
+    height: 200px;
+  }
+  .grid-item{
+   background-color: #fff;
+   border-radius: 0.4rem;
+   overflow: hidden;
+   box-shadow: 0 3rem 6rem rgb(141, 139, 139);
+   cursor: pointer;
+   transition: 0.2s;
+  }
+  .grid-item:hover{
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgb(110, 110, 110);
+  }
+  .card-img{
+    display: block;
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+  }
+  .card-content{
+    padding: 1rem; 
+  }
+  .card-header{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 0.5rem;
+    float: left;
+  }
+  .card-text{
+    font-size:10px;
+    letter-spacing: 0.1rem;
+    color:#3d3d3d;
+    margin-bottom: 10px;
+    float: left;
+  }
+  .card-btn{
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    align-items: center;
+    color: #153bb5;
+    background-color: rgb(223, 225, 227);
+    border: none;
+    border-radius: 0.4rem;
+    transition: 0.2s;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+  }
+  .card-btn:hover,
+  .card-btn:active{
+    background-color: rgb(170, 173, 175);
+    color: #0c41ee;
+  }
+  .card-btn:hover span,
+  .card-btn:active span{
+    margin-left: 0.2rem;
+  }
+@media only screen and (max-width:60em){
+  .grid{
+    grid-gap:3rem
+  }
+}
+</style>
+<body>
+  <header>
+   <ul class="items">
+    <li class="nav-item"><a>Home</a></li>
+    <li class="nav-item"><a>Contact us</a></li>
+    <li class="nav-item"><img alt="profile-photo" src="images/image-victor.jpg" class="profile-img"></li>
+   </ul>
+  </header>
+  <nav>
+    <button type="button" id="toggle-btn"><i class="fa fa-bars"></i></button>
+    <span><img alt="profile" src="images/image-victor.jpg" class="profile"></span>
+    <span class="name">Sandip das</span>
+    <ul class="sidebarmenu">
+      <li><a href="#"><i class="fa fa-user"></i>Profile</a></li>
+      <li><a href="#"><i class="fa fa-suitcase"></i>Accounts</a></li>
+      <li><a href="#"><i class="fa fa-question-circle"></i>
+      </i>Help</a></li>
+      <li><a href="#"><i class="fa fa-user-circle"></i>About</a></li>
+      <li><a href="#"><i class="fa fa-gear"></i></i>Settings</a></li>
+    </ul>
+  </nav>
+  <section>
+    <div class="grid">
+      <div class="grid-item">
+       <div class="card">
+         <img  class="card-img" src="images/maldives.jpg" alt="maldives photo">
+         <div class="card-content">
+           <h1 class="card-header">Maldives</h1>
+           <p class="card-text">The Maldives located in the Indian Ocean.
+           </p>
+           <button class="card-btn">Visit <span> &rarr; </span></button>
+         </div>
+       </div>
+      </div>
+      <div class="grid-item">
+       <div class="card">
+         <img  class="card-img" src="images/singapore.jpg" alt="singapore photo">
+         <div class="card-content">
+           <h1 class="card-header">Singapore</h1>
+           <p class="card-text">Singapore, is a sovereign island country.
+           </p>
+           <button class="card-btn">Visit <span> &rarr; </span></button>
+         </div>
+       </div>
+      </div>
+      <div class="grid-item">
+       <div class="card">
+         <img  class="card-img" src="images/thailand.jpg" alt="thailand photo">
+         <div class="card-content">
+           <h1 class="card-header">Thailand</h1>
+           <p class="card-text">Thailand, historically known as Siam.</p>
+           <button class="card-btn">Visit <span> &rarr; </span></button>
+         </div>
+       </div>
+      </div>
+      <div class="grid-item">
+       <div class="card">
+         <img  class="card-img" src="images/rome.jpg" alt="rome photo">
+         <div class="card-content">
+           <h1 class="card-header">Rome</h1>
+           <p class="card-text">Rome is the capital city of Italy.         
+           </p>
+           <button class="card-btn">Visit <span> &rarr; </span></button>
+         </div>
+       </div>
+      </div> 
+      <div class="grid-item">
+       <div class="card">
+         <img  class="card-img" src="images/Sri lanka.jpg" alt="srilanka photo">
+         <div class="card-content">
+           <h1 class="card-header">Sri lanka</h1>
+           <p class="card-text">Sri Lanka, is an island country in South Asia.
+           </p>
+           <button class="card-btn">Visit <span> &rarr; </span></button>
+         </div> 
+       </div>
+      </div>
+       <div class="grid-item">
+       <div class="card">
+         <img  class="card-img" src="images/dubai.jpg" alt="dubai photo">
+         <div class="card-content">
+           <h1 class="card-header">Dubai</h1>
+           <p class="card-text">Dubai is the most populous city in the United Arab.</p>
+           <button class="card-btn">Visit <span>&rarr;</span></button>
+         </div>
+       </div>
+      </div> 
+   </div>
+  </section>
+  <script>
+    const nav = document.querySelector('nav');
+    const togglebtn = document.getElementById('toggle-btn');
+    const content = document.querySelector('section');
+    togglebtn.onclick = function() {
+       nav.classList.toggle('hide');
+       content.classList.toggle('expand');    
+    }
+  </script>
+</body>
+</html>
