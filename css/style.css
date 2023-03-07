@@ -144,9 +144,9 @@ nav span{
 section{
   position: relative;
   top:30px;
-  left: 270px;
+  left: 250px;
   height: auto;
-  width: calc(100% - 270px);
+  width: calc(100% - 250px);
   padding: 40px;
   transition: ease-in 0.7s;
   background-color: #eee;
@@ -165,13 +165,13 @@ section.expand{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width:80em;
+    width:100em;
     height: 100%;
     gap:1rem;
   }
   .card{
-    width:200px;
-    height: 200px;
+    width:250px;
+    height: 210px;
   }
   .grid-item{
    background-color: #fff;
@@ -188,7 +188,7 @@ section.expand{
   .card-img{
     display: block;
     width: 100%;
-    height: 10rem;
+    height: 11rem;
     object-fit: cover;
   }
   .card-content{
@@ -221,6 +221,7 @@ section.expand{
     transition: 0.2s;
     cursor: pointer;
     letter-spacing: 0.1rem;
+
   }
   .card-btn:hover,
   .card-btn:active{
