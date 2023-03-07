@@ -183,7 +183,7 @@ section.expand{
   }
   .grid-item:hover{
     transform: translateY(-0.5%);
-    box-shadow: 0 4rem 8rem rgb(134, 133, 133);
+    box-shadow: 0 4rem 8rem rgb(110, 110, 110);
   }
   .card-img{
     display: block;
@@ -329,22 +329,8 @@ section.expand{
     font-size:15px;
   }
   .card-btn{
-    padding: 1.2rem;
-    font-size: 1.7rem;
-  }
-  .card-btn{
-    display: block;
-    width: 100%;
     padding: 1.5rem;
-    font-size: 1.2rem;
-    align-items: center;
-    color: #153bb5;
-    background-color: rgb(223, 225, 227);
-    border: none;
-    border-radius: 0.4rem;
-    transition: 0.2s;
-    cursor: pointer;
-    letter-spacing: 0.1rem;
+    font-size: 1.4rem;
   }
   section{
     left: 100px;
