@@ -31,6 +31,13 @@ header{
   list-style-type: none;
   gap: 30px;
 }
+.nav-item{
+  font-size: 1.5rem;
+}
+.nav-item:hover{
+  font-weight: 500;
+  color: rgb(72, 72, 72);
+}
 .profile-img {
   border-radius: 50%;
   border: 2px solid rgb(225, 229, 231);
@@ -57,13 +64,6 @@ nav{
 nav.hide{
   transition: ease-in 0.5s;
   width: 0;
-}
-.nav-item{
-  font-size: 1.5rem;
-}
-.nav-item:hover{
-  font-weight: 500;
-  color: rgb(170, 173, 175);
 }
 nav span{
   width: 100%;
@@ -237,6 +237,11 @@ section.expand{
     color: #fff;
     z-index: 30;
   }
+  .nav-item:hover{
+    font-weight: 500;
+    color: rgb(170, 173, 175);
+  }
+  .p
   .items{
     display: flex;
     justify-content: flex-end;
