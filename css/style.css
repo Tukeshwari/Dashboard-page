@@ -147,7 +147,7 @@ section{
   left: 270px;
   height: 100%;
   width: calc(100% - 270px);
-  padding: 30px;
+  padding: 40px;
   transition: ease-in 0.7s;
   background-color: #eee;
   display: flex;
@@ -167,7 +167,7 @@ section.expand{
     flex-wrap: wrap;
     width:80em;
     height: 100%;
-    gap:2rem;
+    gap:1rem;
   }
   .card{
     width:200px;
@@ -232,9 +232,6 @@ section.expand{
     margin-left: 0.2rem;
   }
 @media only screen and (max-width:500px){
-  nav{
-    width: 400px;
-  }
   header{
     background-color: black;
     color: #fff;
@@ -247,8 +244,14 @@ section.expand{
     list-style-type: none;
     gap: 30px;
   }
+  nav{
+    width: 400px;
+  }
   .sidebarmenu li a{
     padding-left: 15rem;  
+  }
+  section{
+    padding: 8rem;
   }
   .grid{
     width:90em;
