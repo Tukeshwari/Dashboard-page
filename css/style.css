@@ -62,7 +62,8 @@ nav.hide{
   font-size: 1.5rem;
 }
 .nav-item:hover{
-  font-weight: 700;
+  font-weight: 500;
+  color: rgb(170, 173, 175);
 }
 nav span{
   width: 100%;
@@ -118,7 +119,7 @@ nav span{
   background-color: rgb(170, 173, 175);
 }
 .sidebarmenu li a i{
-  margin:0 3px;
+  margin:0 4px;
   width: 20px;
   font-size: 20px;
 }
@@ -234,6 +235,18 @@ section.expand{
   nav{
     width: 400px;
   }
+  header{
+    background-color: black;
+    color: #fff;
+    z-index: 30;
+  }
+  .items{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    gap: 30px;
+  }
   .sidebarmenu li a{
     padding-left: 15rem;  
   }
@@ -267,8 +280,11 @@ section.expand{
   nav{
     width: 370px;
   }
+  .nav-item{
+    font-size: 1.8rem;
+  }
   nav span{
-    margin-top: 3.5rem;  
+    margin-top: 4.2rem;  
   }
   .sidebarmenu{
     gap: 12px;
@@ -314,17 +330,6 @@ section.expand{
     font-size: 1.4rem;
   }
   section{
-    position: relative;
-    top:30px;
     left: 100px;
-    height: 100%;
-    width: calc(100% - 270px);
-    padding: 30px;
-    transition: ease-in 0.7s;
-    background-color: #eee;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
-
 }
