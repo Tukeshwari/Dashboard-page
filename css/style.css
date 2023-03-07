@@ -145,7 +145,7 @@ section{
   position: relative;
   top:30px;
   left: 270px;
-  height: 100%;
+  height: auto;
   width: calc(100% - 270px);
   padding: 40px;
   transition: ease-in 0.7s;
@@ -177,13 +177,13 @@ section.expand{
    background-color: #fff;
    border-radius: 0.4rem;
    overflow: hidden;
-   box-shadow: 0 3rem 6rem rgb(141, 139, 139);
+   box-shadow: 0 3rem 6rem rgb(181, 180, 180);
    cursor: pointer;
    transition: 0.2s;
   }
   .grid-item:hover{
     transform: translateY(-0.5%);
-    box-shadow: 0 4rem 8rem rgb(110, 110, 110);
+    box-shadow: 0 4rem 8rem rgb(134, 133, 133);
   }
   .card-img{
     display: block;
