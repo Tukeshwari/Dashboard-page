@@ -143,7 +143,7 @@ nav span{
 
 section{
   position: relative;
-  top:30px;
+  top:40px;
   left: 250px;
   height: auto;
   width: calc(100% - 250px);
@@ -167,7 +167,7 @@ section.expand{
     flex-wrap: wrap;
     width:100em;
     height: 100%;
-    gap:1rem;
+    gap:1.3rem;
   }
   .card{
     width:250px;
