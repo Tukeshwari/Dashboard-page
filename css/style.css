@@ -259,7 +259,7 @@ section.expand{
   }
   .card{
     width:300px;
-    height: 300px;
+    height: auto;
   }
   .card-img{
     height: 15rem;
@@ -314,7 +314,7 @@ section.expand{
   }
   .card{
     width:300px;
-    height: 300px;
+    height: auto;
   }
   .card-img{
     height: 15rem;
