@@ -329,9 +329,22 @@ section.expand{
     font-size:15px;
   }
   .card-btn{
+    padding: 1.2rem;
+    font-size: 1.7rem;
+  }
+  .card-btn{
+    display: block;
+    width: 100%;
     padding: 1.5rem;
-    font-size: 2.2rem;
-    color: #19213d;
+    font-size: 1.2rem;
+    align-items: center;
+    color: #153bb5;
+    background-color: rgb(223, 225, 227);
+    border: none;
+    border-radius: 0.4rem;
+    transition: 0.2s;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
   }
   section{
     left: 100px;
