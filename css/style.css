@@ -313,5 +313,18 @@ section.expand{
     padding: 1.5rem;
     font-size: 1.4rem;
   }
+  section{
+    position: relative;
+    top:30px;
+    left: 100px;
+    height: 100%;
+    width: calc(100% - 270px);
+    padding: 30px;
+    transition: ease-in 0.7s;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 }
